@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+
+
+
+
+Bueno para este video voy a crear mi propia version de pycritty
+
+Si no sabeis que es pycritty o quereis saber mas sobre como funciona u 
+otra forma de programar-lo os dejo el video original de pycritty creado
+por Antonio Sarosi.
+
+En resument pycritty es un programa de CLI que sirve para cambiar la 
+configuracion de Alacritty
+
+La configuracion de alacrittty esta dentro de este archivo de configuracion
+que ahora mismo podeis ver en pantalla.
+
+Este video no va con la intencion copiar a nadie ni nada por el estilo, sino 
+de animar a todas las personas que como 
+yo acaban de empezar en este mundo de que empizen a hacer algun proyecto por 
+por poco que sepan
+
+Por ejemplo yo llevo solo 3 meses programando y no de manera continuada.
+
+
