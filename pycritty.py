@@ -1,28 +1,52 @@
 import argparse
 import yaml
+import os
+
+
+
+class myerror(Exception):
+   pass 
+
+
+
 
 def get_data():
 
     with open ('alacritty.yml','r') as f:
-        config = yaml.load(f , Loader=yaml.FullLoader)
+        data = yaml.load(f , Loader=yaml.FullLoader)
     
-    return config
+    return data
+
+
+def get_themes(theme):
+    files = os.listdir(path='themes')
+    themes = []
+    for i in files:
+        themes.append(i.split('.')[0])
+    print(themes)
+    try:
+        if theme in themes:
+            return theme
+        raise myerror('theme error')
+    except:
+    
+
+
 
 
 def Themes(data , theme):
-    #obrir alavritty.yaml i transformar a diccionari
-    with open ('alacritty.yml','r') as f:
-        config = yaml.load(f , Loader=yaml.FullLoader)
-
+    path = 'themes/'+theme+'.yaml'
     #obrir tema i transformar en diccionari
-    with open ('themes/onedark.yaml','r') as f:
+    with open ( path ,'r') as f:
         theme = yaml.load(f , Loader=yaml.FullLoader)
 
     #intercambiar alavritty_diccionari.colors --> colors de tema
-    config['colors']=theme['colors']
+    data['colors']=theme['colors']
 
-    new_config = yaml.dump(config, sort_keys= True)
+    new_config = yaml.dump(data, sort_keys= True)
     #tornar a escriure alacritty.yaml
 
     with open ('alacritty.yml','w') as f:
         f.write(new_config)
+
+get_themes()

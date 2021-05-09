@@ -1,5 +1,3 @@
-# Example font config file. If you have these fonts installed you can apply them
-
 fonts:
     UbuntuMono: UbuntuMono Nerd Font
     Mononoki: mononoki Nerd Font
@@ -10,7 +8,3 @@ fonts:
     Iosevka: Iosevka NF
     Hack: Hack NF
     SpaceMono: SpaceMono NF
-    JetBrains:
-        normal: JetBrains Mono Medium Nerd Font
-        italic: JetBrains Mono Medium Nerd Font
-        bold: JetBrains Mono ExtraBold Nerd Font
