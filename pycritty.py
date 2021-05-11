@@ -2,11 +2,17 @@
 import argparse
 import yaml
 import os
-from functions import *
+from pathlib import Path
+
+global PathPy
+PathPy = __file__.split('/')
+PathPy = '/'.join(PathPy[0:-1])
+
 
 def DATA():
 #obrir alavritty.yaml i transformar a diccionari
-    with open ('alacritty.yml','r') as f:
+    path = str(Path.home())+'/.config/alacritty/alacritty.yml'
+    with open (path,'r') as f:
         config = yaml.load(f , Loader=yaml.FullLoader)
     return config
 
@@ -15,7 +21,7 @@ def Themes(theme):
     if theme == None:
         return
     global config
-    theme = 'themes/'+theme+'.yaml'
+    theme = PathPy+'/themes/'+theme+'.yaml'
 #obrir tema i transformar en diccionari
     with open (theme,'r') as f:
         theme = yaml.load(f , Loader=yaml.FullLoader)
@@ -23,9 +29,8 @@ def Themes(theme):
     config['colors']=theme['colors']
 
 def get_fonts():
-        with open ('fonts.yaml','r') as f:
-            DC_fonts = yaml.load(f , Loader=yaml.FullLoader)
-            print(DC_fonts)
+        with open (PathPy+'/fonts.yaml','r') as f:
+            DC_fonts = yaml.load(f , Loader=yaml.FullLoader) 
         return DC_fonts
 
 def font(font):
@@ -103,7 +108,7 @@ def cli():
     return parser.parse_args()
 
 
-print(__name__)
+
 
 if __name__ == '__main__':
     args = cli()
@@ -114,7 +119,7 @@ if __name__ == '__main__':
     fontsize(args.fontsize)
     opacity(args.opacity)
     padding(args.padding)
-    cursor(args.padding)
+    cursor(args.cursor)
     
-    with open('alacritty.yml','w') as file:
+    with open(str(Path.home())+'/.config/alacritty/alacritty.yml','w') as file:
         yaml.dump(config, file)

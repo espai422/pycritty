@@ -1,36 +1,26 @@
-background_opacity: 0.5
+background_opacity: 0.9
 colors:
   bright:
-    black: '0x5c6370'
-    blue: '0x61afef'
-    cyan: '0x56b6c2'
-    green: '0x98c379'
-    magenta: '0xc678dd'
-    red: '0xe06c75'
-    white: '0xe6efff'
-    yellow: '0xd19a66'
-  dim:
-    black: '0x1e2127'
-    blue: '0x61afef'
-    cyan: '0x56b6c2'
-    green: '0x98c379'
-    magenta: '0xc678dd'
-    red: '0xe06c75'
-    white: '0x828791'
-    yellow: '0xd19a66'
+    black: '0x434758'
+    blue: '0x9cc4ff'
+    cyan: '0xa3f7ff'
+    green: '0xddffa7'
+    magenta: '0xe1acff'
+    red: '0xff8b92'
+    white: '0xffffff'
+    yellow: '0xffe585'
   normal:
-    black: '0x1e2127'
-    blue: '0x61afef'
-    cyan: '0x56b6c2'
-    green: '0x98c379'
-    magenta: '0xc678dd'
-    red: '0xe06c75'
-    white: '0x828791'
-    yellow: '0xd19a66'
+    black: '0x101010'
+    blue: '0x82aaff'
+    cyan: '0x89ddff'
+    green: '0xc3e88d'
+    magenta: '0xc792ea'
+    red: '0xf07178'
+    white: '0xd0d0d0'
+    yellow: '0xffcb6b'
   primary:
-    background: '0x1e2127'
-    bright_foreground: '0xe6efff'
-    foreground: '0xabb2bf'
+    background: '0x292d3e'
+    foreground: '0xbbc5ff'
 cursor:
   style: Beam
 font:
